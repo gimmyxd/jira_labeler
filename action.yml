@@ -1,0 +1,18 @@
+---
+name: 'Jira labeler'
+description: 'Labels github PR based on tickets type'
+branding:
+  icon: 'check-square'
+  color: 'blue'
+inputs:
+  repo_token:
+    description: 'The GITHUB_TOKEN secret'
+  jira_url:
+    description: 'The url of the Jira API'
+  config_path:
+    description: 'The path for the label configurations'
+    default: '.github/label_rules.yml'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
